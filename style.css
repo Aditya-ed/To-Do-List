@@ -1,0 +1,107 @@
+*{
+    margin:0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    
+}
+.container{
+    width: 100%;
+    min-height: 100vh;
+    background: linear-gradient(45deg,rgb(18, 83, 145), rgb(188, 0, 212));
+    padding: 10px;
+}
+.task_nav
+{
+    background-color: white;
+    width: 100%;
+    max-width: 540px;
+    padding:50px 40px 70px;
+    margin: 40px auto ;
+    border-radius:20px;
+}
+.task_nav h2{
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+    margin-left: 5px;
+}
+.task_nav h2 i{
+    margin-left: 10px;
+}
+.row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: gainsboro;
+    border-radius: 30px;
+    padding-left: 20px;
+}
+input{
+    flex:1;
+    border: none;
+    outline: none;
+    background: transparent;
+    padding: 10px;
+    font-weight: 14px;
+    
+}
+button{
+    border: none;
+    outline: none;
+    background: orangered;
+    padding: 16px 50px;
+    border-radius: 50px;
+    font-size: 16px;
+    cursor: pointer;
+    font-weight: bolder;
+    color:white
+}
+ul li{
+    list-style: none;
+    padding:  12px 8px 12px 50px;
+    font-size: 17px;
+    user-select:  none;
+    position: relative;
+}
+ul li::before
+{
+    cursor: pointer;
+    content: '';
+    position: absolute;
+    height: 28px;
+    width: 28px;
+    border-radius: 50% ;
+    background-image: url(images/unchecked.png);
+    background-size: cover;
+    background-position: center;
+    top: 10px;
+    left: 8px;
+}
+ul li.checked{
+    color: black;
+    text-decoration: line-through;
+
+}
+ul li.checked::before
+{
+    background-image: url(images/checked.png);
+}
+
+ul li span {
+    position: absolute;
+    right: 0;
+    top:5px;
+    width: 40px;
+    height: 40px;
+    font-size: 22px;
+    color:black;
+    line-height: 40px;
+    text-align: center;
+}
+
+ul li span:hover
+{
+    background-color: gainsboro;
+    border-radius: 30px;
+}
